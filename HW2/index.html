@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PIG</title>
+		<meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/MyResume.css">
+        <script src="JS/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="js/MyResume.js"></script>
+        <script src="js/Cscore.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <script src="JS/Cscore.js"></script>
+        <script src="JS/scrollC.js"></script>
+	    
+	</head>
+	<body>
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+		<article id="Resume">
+			<section>
+				<table id="AMTable">
+					<tr>
+						<td>
+							<img id="Me" src="picture/photo/Me.png">
+						</td>
+						<td>
+							<h2 id="AMTitle">『活在當下 做好自己』</h2>
+							<p id="AMWord" class="Chinese">Hello 大家好～我是方怡晴<br>
+								生日是10/2是個和善的天秤座喔<br>
+								現在就讀中原大學資管系，<br>
+                                未來期許自己能夠大學畢業！</p>
+							<a href="https://www.facebook.com/feng.zi.737" target="_blank"><img class="AMIcon" src="picture/icon/facebook.png"></a>
+							<a href="https://www.instagram.com/fx657vac/" target="_blank"><img class="AMIcon" src="picture/icon/instagram.png"></a>
+							<a href="http://line.naver.jp/ti/p/u4q1_6fjxD" target="_blank"><img class="AMIcon" src="picture/icon/line.png"></a>
+							<a href="mailto:fx657vac@gmail.com" target="_blank"><img class="AMIcon" src="picture/icon/email.png"></a>
+						</td>
+					</tr>
+				</table>
+			</section>
+			<div id="Line"></div>
+			<section>
+				<div id="ADiv">
+					<table id="ATable">
+						<tr>
+							<td id="tdLeft" class="tdATable">
+                                <h2 class="ArticleChinese">SKILL</h2>
+                                <script>
+                                    var i = 0;
+                                    
+                                    var int=self.setInterval("clock()",700);
+                                    
+                                    function clock(){
+                                        i++;
+                                        if(parseInt(i/2) == i/2){
+                                            $("#c1").addClass("anim-show");
+                                            $("#c1").removeClass("anim-show1");
+                                            $("#c2").addClass("anim-show");
+                                            $("#c2").removeClass("anim-show1");
+                                        }else{
+                                            $("#c1").removeClass("anim-show");
+                                            $("#c1").addClass("anim-show1");
+                                            $("#c2").removeClass("anim-show");
+                                            $("#c2").addClass("anim-show1");
+                                        }
+                                    }
+                                </script>
+								<table id="SkillsTable">
+                                    <tr>
+                                        <td id = 'c1' class = "anim-show1"><div class="S2-SK">
+                                            <canvas id="canvas_1" class="CA1" width="120" height="120"></canvas>
+                                            <canvas id="canvas_2" class="CA2" width="120" height="120"></canvas>
+                                            <div class="S2-SKW">
+                                                電腦硬體裝修<br>
+                                                <span class="touchMe">touch me</span>
+                                            </div>
+                                        </div></td>
+                                        <td class = "anim-show1"><div class="S2-SK">
+                                            <canvas id="canvas_3" class="CA1" width="120" height="120"></canvas>
+                                            <canvas id="canvas_4" class="CA2" width="120" height="120"></canvas>
+                                            <div class="S2-SKW ">
+                                                網路架設
+                                            </div>
+                                        </div></td>
+                                        </tr>
+                                        <tr>
+                                        <td><div class="S2-SK">
+                                            
+                                            <canvas id="canvas_5" class="CA1" width="120" height="120"></canvas>
+                                            <canvas id="canvas_6" class="CA2" width="120" height="120"></canvas>
+                                            <div class="S2-SKW">
+                                                Piano
+                                            </div>
+                                        </div></td>
+                                        <td id = 'c2' class = "anim-show1"><div class="S2-SK">
+                                            
+                                            <canvas id="canvas_7" class="CA1" width="120" height="120"></canvas>
+                                            <canvas id="canvas_8" class="CA2" width="120" height="120"></canvas>
+                                            <div class="S2-SKW">
+                                                Eat<br>
+                                                <span class="touchMe">touch me</span>
+                                            </div>
+                                        </div></td>
+                                    </tr>
+                                </table>
+                                <script>
+                                    var modal = document.getElementById('myModal');
+                                    var c1 = document.getElementById('c1');
+                                    var c2 = document.getElementById('c2');
+                                    var modalImg = document.getElementById("img01");
+                                    var captionText = document.getElementById("caption");
+                                    c1.onclick = function(){
+                                      modal.style.display = "block";
+                                      modalImg.src = "picture/photo/license.jpg";
+                                      captionText.innerHTML = "電腦硬體裝修乙級";
+                                    }
+                                    
+                                    c2.onclick = function(){
+                                      modal.style.display = "block";
+                                      modalImg.src = "picture/photo/eat.jpg";
+                                      captionText.innerHTML = "吃吃吃";
+                                    }
+                                    var span = document.getElementsByClassName("close")[0];
+                                    span.onclick = function() { 
+                                      modal.style.display = "none";
+                                    }
+                                </script>
+								<h2 class="ArticleChinese">Programming Skill</h2>
+								<table id="PGSkillsTable">
+									<tr>
+										<td>
+											<p class="SkillsWord">C#</p>
+											<div class="PGSkillBarContainer">
+												<div id="CsSkillBar"><font class="percent">85%</font></div>
+												<script type="text/javascript">
+													progress("CsSkillBar", 85);
+												</script>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="SkillsWord">Java</p>
+											<div class="PGSkillBarContainer">
+												<div id="JavaSkillBar"><font class="percent">60%</font></div>
+												<script type="text/javascript">
+													progress("JavaSkillBar", 60);
+												</script>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="SkillsWord">HTML/CSS/JS</p>
+											<div class="PGSkillBarContainer">
+												<div id="HCJSkillBar"><font class="percent">70%</font></div>
+												<script type="text/javascript">
+													progress("HCJSkillBar", 70);
+												</script>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="SkillsWord">python</p>
+											<div class="PGSkillBarContainer">
+												<div id="AdSkillBar"><font class="percent">50%</font></div>
+												<script type="text/javascript">
+													progress("AdSkillBar", 50);
+												</script>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td id="tdMiddle" class="tdATable">
+								<div id="MiddleLine"></div>
+							</td>
+							<td id="tdRight" class="tdATable">
+								<h2 class="ArticleChinese">Activity</h2>
+								<div class="accordionMargin">
+									<img class="image1" src="picture/photo/happy.jpg" alt="unhappy" width="450" height="350">
+								</div>
+								<div class="accordionMargin">
+									<img class="image1" src="picture/photo/happy2.jpg" alt="unhappy" width="450" height="350">
+								</div>
+								<div class="accordionMargin">
+									<div class="activityWord">
+                                        ~ 資管系學會 ~<br><br>
+                                        我從大二開始參加系學會，目前擔任小小的員工，
+                                        雖然才剛進來沒多久，但這段期間能跟大家一起
+                                        籌備資管系上的各個活動真的很開心！
+                                    </div>
+								</div>
+							</td>
+						</tr>
+						<script>
+						var acc = document.getElementsByClassName("accordion");
+						var i;
+						for (i = 0; i < acc.length; i++) {
+						acc[i].addEventListener("click", function() {
+						this.classList.toggle("active");
+						var panel = this.nextElementSibling;
+						if (panel.style.display === "block") {
+						panel.style.display = "none";
+						} else {
+						panel.style.display = "block";
+						}
+						});
+						}
+						</script>
+					</table>
+				</div>
+			</section>
+			<section>
+				<div id="BDiv">
+					<h2 class="BDivTitle Chinese">Experience</h2>
+					<table class="talentTable">
+						<tr>
+							<td class="talentTabletd">
+								<div class="talentWordDiv">
+									<h3 class="Chinese talenth3">大一上企業概論</h3>
+									<p class="Chinese talentP">與方舟合作的這段期間我學習到了很多，從一開始的訪談到義賣，讓我更加了解方舟這個大家庭，從中我看到了人間的溫暖、憨寶寶們的用心，希望未來我還有機會能夠幫助到更多需要幫助的人。</p>
+								</div>
+							</td>
+							<td class="experienceTable">
+								<a target="_blank" href="https://drive.google.com/file/d/1wVdW07j1z-kROBo9i4v_rafrUWswsbFq/view?usp=sharing">
+									<div class="talentRightDiv">
+										<img class="talentImg" src="picture/photo/campus.jpg">
+										<h3 class="enterHint Chinese">what's this ?</h3>
+									</div>
+								</a>
+							</td>
+						</tr>
+						<tr class="experienceTable">
+                            <td class="experienceTable">
+								<a target="_blank" href="https://drive.google.com/file/d/1slGl5SkASEW-KR4kFc2pZL9G38vGBjc5/view?usp=sharing">
+									<div class="talentRightDiv">
+										<img class="talentImg" src="picture/photo/shop.jpg">
+										<h3 class="enterHint Chinese">what's this ?</h3>
+									</div>
+								</a>
+							</td>
+							<td class="talentTabletd">
+								<div class="talentWordDiv">
+									<h3 class="Chinese talenth3">大一下管理學</h3>
+									<p class="Chinese talentP">經過這次管理學這門課讓我感到獲益良多，跟乙班同學合作真的非常有趣，擺攤時能跟著他們叫賣，能一起參與活動，這些都讓我學習到非常多東西，像是該怎麼讓客人了解我們的商品，或著是要用什麼方法才能讓他們注意到我們，並且購買我們的商品，這些經驗如果沒有這門課是很難體驗到的吧，也很感謝乙班同學讓我們幫忙，並且給予我們很多建議，希望下次還有機會能與他們一起合作！</p>
+								</div>
+							</td>
+						</tr>
+						<tr class="experienceTable">
+							<td class="talentTabletd">
+								<div class="talentWordDiv">
+									<h3 class="Chinese talenth3">大二上多媒體</h3>
+									<p class="Chinese talentP">在這次期中報告的過程中，我才發現原來學網路架設設計感也要很好，從打出簡單的文字到編筐樣式，不但要想顏色該怎麼搭配，還要去設計排版，其中很慶幸我們組員之間都很配合，也相處得很好。雖然現在有很多地方還是了解，希望之後我能更加提升自身實力，做出更棒的網站！</p>
+								</div>
+							</td>
+							<td class="experienceTable">
+								<a target="_blank" href="https://drive.google.com/file/d/15OgdS77ws7cvhaUg25uLuzeXkf6Nhso-/view?usp=sharing">
+									<div class="talentRightDiv">
+										<img class="talentImg" src="picture/photo/website2.jpg">
+										<h3 class="enterHint Chinese">what's this ?</h3>
+									</div>
+								</a>
+							</td>
+						</tr>
+					</table>
+				</section>
+		</article>
+		<footer>
+			<p id="copyright">Copyright © 2020 By I Ching<br>Tel:0975241331 <br> Welcome To You </p>
+		</footer>
+	</body>
+</html>
